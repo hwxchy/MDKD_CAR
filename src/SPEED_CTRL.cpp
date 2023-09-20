@@ -7,8 +7,8 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 #define left_pin    A1
 #define right_pin   A2
 
-int speed = 100;
-int max_speed = 150;
+int speed = 80;
+int max_speed = 130;
 
 volatile float kP;
 volatile float kI;
@@ -40,7 +40,7 @@ void Motor(int ID,int SPEED){  //电机端口 1-4  速度可调  -255-0-255
 
 
 int SPEED_CTRL::motor_ctrl(int ID1,int SPEED1) {
-  if(ID1==1 || ID1==2){
+  if(ID1==0 || ID1==3){
     SPEED1=-SPEED1;
   }
   Motor(ID1,SPEED1);
@@ -49,9 +49,9 @@ int SPEED_CTRL::motor_ctrl(int ID1,int SPEED1) {
 
 int SPEED_CTRL::start() {
 // Serial.begin(9600);
-  kP = 0.25;
+  kP = 0.30;
   kI = 0;
-  kD = 0.01;
+  kD = 0;
   LastError = 0;
   Error = 0;
   ALLError = 0;
@@ -59,7 +59,9 @@ int SPEED_CTRL::start() {
   return 1;
 }
 int SPEED_CTRL::line() {
-  Error = analogRead(right_pin) - analogRead(left_pin);
+  int A1_D = analogRead(left_pin);
+  int A2_D = analogRead(right_pin);
+  Error = A2_D - A1_D;
   //Serial.println(Error);
   P = Error * kP;
   I = ALLError * kI;
@@ -73,11 +75,12 @@ int SPEED_CTRL::line() {
   Serial.println(l_speed);
   Serial.print("r_speedV2::::");
   Serial.println(r_speed);*/
-  Motor(0, r_speed); // 设置左电机速度为200
-  Motor(1, -l_speed); // 设置左电机速度为200
-  Motor(2, -l_speed); // 设置左电机速度为200
-  Motor(3, r_speed); // 设置左电机速度为200
+  Motor(0, -r_speed); // 设置左电机速度为200
+  Motor(1, l_speed); // 设置左电机速度为200
   
+  //Motor(2, l_speed); // 设置左电机速度为200
+  //Motor(3, -r_speed); // 设置左电机速度为200
   return l_speed;
-}
+  }
+  
 
