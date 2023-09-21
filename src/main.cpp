@@ -79,18 +79,18 @@ void turn_right(int rq = 300){
   while (analogRead(A2)<500){
   run_y();
   }
-  while (analogRead(A1)-analogRead(A2)>100){
+  while (analogRead(A1)-analogRead(A2)>150){
     run_y();
   }
   run_q(70,rq);
 }
 
 void turn_left(int rq = 300){
-  while (analogRead(A1)<600){
+  while (analogRead(A1)<500){
   run_z();
   }
   Serial.println("r1");
-  while (analogRead(A1)-analogRead(A2)>100){
+  while (analogRead(A1)-analogRead(A2)>150){
     run_z();
   }
   Serial.println("r2");
@@ -98,17 +98,17 @@ void turn_left(int rq = 300){
 }
 
 void turn_around(int rq = 300){
- while (analogRead(A2)<600){
+ while (analogRead(A2)<500){
   run_y();
   }
-  while (analogRead(A1)-analogRead(A2)>100){
+  while (analogRead(A1)-analogRead(A2)>150){
     run_y();
   }
   run_y(70,300);
-   while (analogRead(A2)<600){
+   while (analogRead(A2)<500){
   run_y();
   }
-  while (analogRead(A1)-analogRead(A2)>100){
+  while (analogRead(A1)-analogRead(A2)>150){
     run_y();
   }
   run_q(70,rq);
@@ -177,17 +177,17 @@ void part_2(){
     speedCtrl.line();
   }while(digitalRead(11) == LOW);
   run_t(0,1000);//m7_1
-  run_q(70,300);
+  run_q(80,300);
     do{
     speedCtrl.line();
   }while(digitalRead(11) == LOW);
   run_t(0,1000);//m7_2
-  run_q(70,300);
+  run_q(80,300);
     do{
     speedCtrl.line();
   }while(digitalRead(11) == LOW);
   run_t(0,1000);//m9
-  run_q(70,300);
+  run_q(80,300);
 }
 
 void part_3(){
