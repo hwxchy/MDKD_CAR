@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <MsTimer2.h>
 #include <SPEED_CTRL.h>
-int speed_run = 70; 
+int speed_run = 80; 
 SPEED_CTRL speedCtrl;
 volatile int time_100ms;
 int inter_left = 0;
