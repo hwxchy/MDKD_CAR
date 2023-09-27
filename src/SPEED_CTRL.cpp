@@ -7,8 +7,8 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 #define left_pin    A1
 #define right_pin   A2
 
-int speed = 90;//80
-int max_speed = 150;//130
+int speed = 80;//80
+int max_speed = 140;//130
 
 volatile float kP;
 volatile float kI;
@@ -49,7 +49,7 @@ int SPEED_CTRL::motor_ctrl(int ID1,int SPEED1) {
 
 int SPEED_CTRL::start() {
 // Serial.begin(9600);
-  kP = 0.35;
+  kP = 0.13;
   kI = 0;
   kD = 0;
   LastError = 0;
