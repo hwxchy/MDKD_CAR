@@ -15,8 +15,8 @@
 
 ## 软件包下载地址
 
-- 软件包下载地址：[链接](https://pan.baidu.com/s/1-9eIq8MNXhK0nopOXOPrtA?pwd=mdkd) 提取码：mdkd。（虽然我很讨厌百度云，但是大文件分享只能用这个了）对应安装教程见[链接](http:\\xxxxxxxxxxx)。
+- 软件包下载地址：[链接](https://pan.baidu.com/s/1-9eIq8MNXhK0nopOXOPrtA?pwd=mdkd) 提取码：mdkd。（虽然我很讨厌百度云，但是大文件分享只能用这个了）对应软件安装教程见[链接](https://www.bilibili.com/video/BV1hB4y1Z7DY/)。
 
 ## 代码解释视频
 
-- 代码解释视频：[链接](http:\\xxxxxxxxxxxx)（重中之重，请各位老师务必多看两遍）。
+- 代码解释视频1为：[链接](https://www.bilibili.com/video/BV1kp4y1M751/)，代码解释视频2为：[链接](https://www.bilibili.com/video/BV1Y94y187s3/)（重中之重，请各位老师务必多看两遍）。
